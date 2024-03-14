@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Donations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='donations.css') }}">
+</head>
+<body>
+    <h1>Record Donations</h1>
+    <form method="post" action="{{ url_for('donations') }}">
+        <label for="donor_id">Donor:</label>
+        <select id="donor_id" name="donor_id" required>
+            {% for donor in donors %}
+            <option value="{{ donor['id'] }}">{{ donor['name'] }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="date">Date (YYYY-MM-DD):</label>
+        <input type="text" id="date" name="date" required pattern="\d{4}-\d{2}-\d{2}" title="Please enter a date in the format YYYY-MM-DD"><br>
+
+        <label for="volume">Volume in ml:</label>
+        <input type="text" id="volume" name="volume" required pattern="[0-9]+" title="Please enter a valid positive number for volume" maxlength="3" max="500"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Donations</h2>
+    <table style="border-collapse: collapse; width: 100%; border: 1px solid black;">
+        <thead>
+            <tr>
+                <th style="border: 2px solid white;">Donor Name</th>
+                <th style="border: 2px solid white;">Date</th>
+                <th style="border: 2px solid white;">Volume(ml)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for donation in donations %}
+            <tr>
+                <td style="border: 2px solid white;">{{ donation['name'] }}</td>
+                <td style="border: 2px solid white;">{{ donation['date'] }}</td>
+                <td style="border: 2px solid white;">{{ donation['volume'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

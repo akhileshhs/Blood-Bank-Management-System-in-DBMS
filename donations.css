@@ -1,0 +1,63 @@
+/* static/donations.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f74040 url('cells.jpg') center center fixed no-repeat; /* Set background image */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+}
+h1{
+    text-align: center;
+    color: #f7f5f5;
+}
+form {
+    font-weight: bold;
+    color: #fbf7f7;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2{
+    color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+th{
+    background-color: black;
+    color: white;
+}
+tr{
+    color: white;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+button {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #070707;
+    color: #fff;
+    border: solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: orange;
+}

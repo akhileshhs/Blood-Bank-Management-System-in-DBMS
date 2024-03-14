@@ -1,0 +1,26 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="background-image">
+            <div class="content">
+                <h1>Welcome to the Blood Bank</h1>
+                <nav class="hover-buttons">
+                    <a href="{{ url_for('index') }}">Home</a>
+                    <a href="{{ url_for('register') }}">Register as a Donor</a>
+                    <a href="{{ url_for('donations') }}">Record Donations</a>
+                    <a href="{{ url_for('request_blood') }}">Request Blood</a>
+                    <a href="{{ url_for('inventory') }}">Inventory</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

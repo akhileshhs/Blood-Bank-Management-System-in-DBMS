@@ -1,0 +1,51 @@
+/* static/styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5 url('blood.jpg') center center fixed no-repeat; /* Set background image */
+    background-size: cover;
+    background-color: #f5f5f5; /* Optional: Set a background color for the body */
+}
+
+header {
+    position: relative;
+    height: 100vh; /* Set header height to full viewport height */
+}
+
+.background-image {
+    background-image: url("drop.jpg"); /* Adjust the path to your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    font-weight: bolder;
+    color: #070707; /* Adjust if you need a different color for visibility */
+}
+
+/* Updated CSS for the button to be blue initially */
+.hover-buttons a {
+    display: block;
+    text-decoration: none;
+    color: #fff; /* Text color changed to white for better contrast */
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ff0000; /* Button color is now blue */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hover-buttons a:hover {
+    background-color: orange; /* Slightly darker blue on hover for a subtle effect */
+    color: #fff;
+}

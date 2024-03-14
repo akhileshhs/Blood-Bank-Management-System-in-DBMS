@@ -1,0 +1,33 @@
+<!-- templates/inventory.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Inventory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inventory.css') }}">
+</head>
+<body>
+    <h1>Blood Bank Inventory</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name ID</th>
+                <th>Blood Type</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for donor in inventory %}
+                <tr>
+                    <td>{{ donor['id'] }}</td>
+                    <td>{{ donor['name'] }}</td>
+                    <td>{{ donor['blood_type'] }}</td>
+                    <td>{{ donor['email'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
